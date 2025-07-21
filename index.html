@@ -1,1 +1,129 @@
-<h1>Hi! I am Haiqal.</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haiqal Aiman - Future Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles to supplement Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Fallback background */
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .tool-icon {
+            transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+            filter: grayscale(50%);
+        }
+        .tool-icon:hover {
+            transform: scale(1.1) translateY(-5px);
+            filter: grayscale(0%);
+        }
+        .card {
+            background-color: rgba(31, 41, 55, 0.6); /* Slightly more opaque for readability */
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Animation for the background */
+        @keyframes fadeInFromTop {
+            from {
+                opacity: 0;
+                transform: translateY(-5%);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #background-wrapper {
+            animation: fadeInFromTop 1.5s 0.2s ease-out forwards;
+            opacity: 0; /* Start as transparent */
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+
+    <!-- Animated Background Container -->
+    <div id="background-wrapper" class="fixed top-0 left-0 w-full h-screen z-[-10]">
+        <!-- The GIF -->
+        <img src="https://github.com/haiqalhasly/haiqalhasly/blob/main/miles-morales-gif-7.gif?raw=true" 
+             alt="Miles Morales swinging through the city" 
+             class="w-full h-full object-cover"
+             onerror="this.style.display='none'">
+        <!-- Dark Overlay for readability -->
+        <div class="absolute top-0 left-0 w-full h-full bg-gray-900/80"></div>
+    </div>
+
+    <!-- Main Content Container -->
+    <div class="container mx-auto max-w-4xl p-4 sm:p-6 md:p-8">
+
+        <!-- Header Section -->
+        <header class="text-center my-12 md:my-20">
+            <h1 class="text-6xl md:text-8xl font-black tracking-tighter gradient-text">
+                Haiqal Aiman
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 mt-4 font-light">
+                Future Developer
+            </p>
+        </header>
+
+        <!-- Main Content Sections -->
+        <main class="space-y-8">
+
+            <!-- About Me Card -->
+            <section class="card rounded-2xl p-6 md:p-8 shadow-lg">
+                <h2 class="text-2xl font-bold mb-4 border-b border-gray-600 pb-2">👋 About Me</h2>
+                <ul class="space-y-4 text-gray-300">
+                    <li><span class="font-semibold text-sky-400">Interests:</span> Backend, Computer Vision & AI Development.</li>
+                    <li><span class="font-semibold text-sky-400">Education:</span> Currently studying Computer Science at Universiti Teknologi Petronas.</li>
+                    <li><span class="font-semibold text-sky-400">Fun Fact:</span> I do not know what I am doing right now (but I'm learning fast!).</li>
+                </ul>
+            </section>
+
+            <!-- Contact Card -->
+            <section class="card rounded-2xl p-6 md:p-8 shadow-lg">
+                <h2 class="text-2xl font-bold mb-4 border-b border-gray-600 pb-2">📫 Get In Touch</h2>
+                <p class="text-gray-300">You can reach me on Instagram:</p>
+                <a href="https://www.instagram.com/_qaman_" target="_blank" rel="noopener noreferrer" class="inline-block mt-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 px-6 rounded-lg transition-transform duration-300 hover:scale-105">
+                    @_qaman_
+                </a>
+            </section>
+
+        </main>
+
+        <!-- Tools Section -->
+        <section class="card rounded-2xl p-6 md:p-8 shadow-lg mt-8">
+            <h2 class="text-2xl font-bold mb-6 text-center">🚀 Tools I've Used & Learned</h2>
+            <div class="flex flex-wrap justify-center items-center gap-6 md:gap-8">
+                <!-- Tool Icons -->
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" title="VS Code" class="tool-icon w-12 h-12 md:w-14 md:h-14"/>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualbasic/visualbasic-original.svg" alt="Visual Basic" title="Visual Basic" class="tool-icon w-12 h-12 md:w-14 md:h-14"/>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-original.svg" alt="Visual Studio" title="Visual Studio" class="tool-icon w-12 h-12 md:w-14 md:h-14"/>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" title="Python" class="tool-icon w-12 h-12 md:w-14 md:h-14"/>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" alt="Flutter" title="Flutter" class="tool-icon w-12 h-12 md:w-14 md:h-14"/>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C++" title="C++" class="tool-icon w-12 h-12 md:w-14 md:h-14"/>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" title="TensorFlow" class="tool-icon w-12 h-12 md:w-14 md:h-14"/>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opencv/opencv-original.svg" alt="OpenCV" title="OpenCV" class="tool-icon w-12 h-12 md:w-14 md:h-14"/>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" title="Java" class="tool-icon w-12 h-12 md:w-14 md:h-14"/>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-500 py-8 mt-8">
+            <p>&copy; 2024 Haiqal Aiman. All Rights Reserved.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
