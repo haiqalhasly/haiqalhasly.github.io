@@ -129,9 +129,7 @@
       <section
         class="mx-auto max-w-7xl px-4 pb-16 pt-16 sm:px-6 lg:px-8 lg:pb-24 lg:pt-24"
       >
-        <div
-          class="grid items-center gap-12 lg:grid-cols-[1.25fr_0.75fr] lg:gap-16"
-        >
+        <div>
           <div>
             <div
               class="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-4 py-2 text-sm text-emerald-100"
@@ -189,40 +187,6 @@
               </a>
             </div>
           </div>
-
-          <aside
-            class="rounded-3xl border border-zinc-800/80 bg-zinc-900/60 p-6 shadow-2xl shadow-black/20 backdrop-blur"
-          >
-            <div class="rounded-2xl border border-zinc-800 bg-zinc-950/80 p-5">
-              <p class="text-sm uppercase tracking-[0.3em] text-zinc-500">
-                Quick Facts
-              </p>
-              <dl class="mt-6 grid gap-4 text-sm text-zinc-300">
-                <div
-                  class="flex items-center justify-between gap-4 border-b border-zinc-800 pb-4"
-                >
-                  <dt class="text-zinc-500">University</dt>
-                  <dd class="text-right text-zinc-100">UTP (Current)</dd>
-                </div>
-                <div
-                  class="flex items-center justify-between gap-4 border-b border-zinc-800 pb-4"
-                >
-                  <dt class="text-zinc-500">CGPA</dt>
-                  <dd class="text-right text-zinc-100">3.81</dd>
-                </div>
-                <div
-                  class="flex items-center justify-between gap-4 border-b border-zinc-800 pb-4"
-                >
-                  <dt class="text-zinc-500">Dean&apos;s List</dt>
-                  <dd class="text-right text-zinc-100">4 Semesters</dd>
-                </div>
-                <div class="flex items-center justify-between gap-4">
-                  <dt class="text-zinc-500">Expected Graduation</dt>
-                  <dd class="text-right text-zinc-100">Dec 2027</dd>
-                </div>
-              </dl>
-            </div>
-          </aside>
         </div>
       </section>
 
@@ -376,7 +340,7 @@
 
           <div class="mt-10 space-y-4">
             <article
-              class="grid gap-4 rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 md:grid-cols-[200px_1fr] md:gap-8"
+              class="grid gap-4 rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 md:grid-cols-[200px_1fr_200px] lg:grid-cols-[200px_1fr_250px] md:gap-8 items-center"
             >
               <div>
                 <p
@@ -401,10 +365,19 @@
                   fundamentals with hands-on practice.
                 </p>
               </div>
+              <div
+                class="relative h-48 w-full overflow-hidden rounded-2xl md:h-full md:min-h-[120px]"
+              >
+                <img
+                  src="image/google_developer_student.jpg"
+                  alt="Google Developer Student Club"
+                  class="absolute inset-0 h-full w-full object-cover"
+                />
+              </div>
             </article>
 
             <article
-              class="grid gap-4 rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 md:grid-cols-[200px_1fr] md:gap-8"
+              class="grid gap-4 rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 md:grid-cols-[200px_1fr_200px] lg:grid-cols-[200px_1fr_250px] md:gap-8 items-center"
             >
               <div>
                 <p
@@ -424,10 +397,12 @@
                   learning projects.
                 </p>
               </div>
+              <div class="hidden md:block"></div>
+              <!-- Placeholder to maintain grid layout since no image exists for this role -->
             </article>
 
             <article
-              class="grid gap-4 rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 md:grid-cols-[200px_1fr] md:gap-8"
+              class="grid gap-4 rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 md:grid-cols-[200px_1fr_200px] lg:grid-cols-[200px_1fr_250px] md:gap-8 items-center"
             >
               <div>
                 <p
@@ -448,6 +423,15 @@
                   engagement by 15%. Served as videographer and video editor for
                   conference documentation and promotional materials.
                 </p>
+              </div>
+              <div
+                class="relative h-48 w-full overflow-hidden rounded-2xl md:h-full md:min-h-[120px]"
+              >
+                <img
+                  src="image/head_of_Department.jpg"
+                  alt="Regional Conference for Student Activism 2025"
+                  class="absolute inset-0 h-full w-full object-cover"
+                />
               </div>
             </article>
           </div>
@@ -519,6 +503,11 @@
             <article
               class="group rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/40 hover:shadow-lg hover:shadow-emerald-500/10"
             >
+              <img
+                src="image/fullstack_crowd_monitoring.jpg"
+                alt="Crowd Monitoring System"
+                class="mb-5 h-48 w-full rounded-2xl object-cover"
+              />
               <div class="flex items-center justify-between gap-4">
                 <p
                   class="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-200/80"
@@ -557,6 +546,11 @@
             <article
               class="group rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/40 hover:shadow-lg hover:shadow-emerald-500/10"
             >
+              <img
+                src="image/ai_deepfake.jpg"
+                alt="AI Deepfake Detection"
+                class="mb-5 h-48 w-full rounded-2xl object-cover"
+              />
               <div class="flex items-center justify-between gap-4">
                 <p
                   class="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-200/80"
@@ -591,6 +585,11 @@
             <article
               class="group rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/40 hover:shadow-lg hover:shadow-emerald-500/10"
             >
+              <img
+                src="image/skin_disease.jpg"
+                alt="Skin Disease Detection System"
+                class="mb-5 h-48 w-full rounded-2xl object-cover"
+              />
               <div class="flex items-center justify-between gap-4">
                 <p
                   class="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-200/80"
@@ -629,6 +628,11 @@
             <article
               class="group rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/40 hover:shadow-lg hover:shadow-emerald-500/10 md:col-span-2 xl:col-span-1"
             >
+              <img
+                src="image/fullstack_food_delivery.jpg"
+                alt="Food Delivery App"
+                class="mb-5 h-48 w-full rounded-2xl object-cover object-top"
+              />
               <div class="flex items-center justify-between gap-4">
                 <p
                   class="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-200/80"
@@ -745,7 +749,7 @@
 
           <div class="mt-10 space-y-4">
             <article
-              class="grid gap-4 rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 md:grid-cols-[200px_1fr] md:gap-8"
+              class="grid gap-4 rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 md:grid-cols-[200px_1fr_200px] md:gap-8 items-center"
             >
               <div>
                 <p
@@ -765,10 +769,17 @@
                   data visualization and interactive reporting.
                 </p>
               </div>
+              <div class="relative h-48 w-full overflow-hidden rounded-2xl md:h-full md:min-h-[120px]">
+                <img
+                  src="image/data_analysis_with_python.jpg"
+                  alt="Data Analysis Workshop"
+                  class="absolute inset-0 h-full w-full object-cover"
+                />
+              </div>
             </article>
 
             <article
-              class="grid gap-4 rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 md:grid-cols-[200px_1fr] md:gap-8"
+              class="grid gap-4 rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 md:grid-cols-[200px_1fr_200px] md:gap-8 items-center"
             >
               <div>
                 <p
@@ -789,6 +800,13 @@
                   practice. Guided students through deploying their first local
                   websites and understanding web development best practices.
                 </p>
+              </div>
+              <div class="relative h-48 w-full overflow-hidden rounded-2xl md:h-full md:min-h-[120px]">
+                <img
+                  src="image/intro_to_web_dev.jpg"
+                  alt="Intro to Web Development Workshop"
+                  class="absolute inset-0 h-full w-full object-cover"
+                />
               </div>
             </article>
           </div>
