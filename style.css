@@ -1,167 +1,29 @@
-/* LESSON 1: CSS Variables. 
-  By putting these in :root, we can reuse these colors everywhere. 
-  If you ever want to change the "vibe", you only have to change it here!
-*/
-:root {
-  --bg-color: #1a1818; /* A very dark, warm charcoal (Cozy) */
-  --window-bg: #2a2626; /* Slightly lighter charcoal for the terminal window */
-  --text-main: #eaddcf; /* A warm, soft off-white */
-  --accent-color: #d08770; /* A soft,orange */
-  --font-mono: 'Courier New', Courier, monospace; /* The hacker font */
+html {
+  scroll-behavior: smooth;
 }
 
-/* Base styles for the whole page */
 body {
-  background-color: var(--bg-color);
-  color: var(--text-main);
-  font-family: var(--font-mono);
-  margin: 0; 
+  font-family: "Inter", system-ui, sans-serif;
 }
 
-/* LESSON 2: Flexbox. 
-  display: flex turns an element into a flexible box. 
-  justify-content centers things horizontally.
-  align-items centers things vertically. 
-*/
-.hero {
-  display: flex;
-  justify-content: center; 
-  align-items: center;     
-  height: 100vh; /* Takes up 100% of the Viewport Height (your whole screen) */
+.masonry {
+  column-count: 1;
+  column-gap: 1rem;
 }
 
-/* Styling the fake terminal window */
-.terminal-window {
-  background-color: var(--window-bg);
-  border: 1px solid #444;
-  border-radius: 8px; /* Soft rounded corners = Cozy */
-  width: 90%;
-  max-width: 600px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Adds a shadow to make it float */
-  
-  position: relative;
+@media (min-width: 768px) {
+  .masonry {
+    column-count: 2;
+  }
 }
 
-.terminal-header {
-  background-color: #1e1b1b;
-  padding: 10px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  display: flex;
-  align-items: center;
-  gap: 8px; /* Puts exactly 8px of space between the little dots */
+@media (min-width: 1024px) {
+  .masonry {
+    column-count: 3;
+  }
 }
 
-/* The little Mac-style window dots */
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
- 
-}
-.red { background-color: #bf616a; }
-.yellow { background-color: #ebcb8b; }
-.green { background-color: #a3be8c; }
-.exit { background-color:
-black;
-width:25px;
-height:25px;
-border-radius:70%;
-justify-content: center;
-display: inline-flex;
-align-items: right;
-position:absolute;
-top:10px;
-right:15px;}
-
-.title {
-  color: #888;
-  font-size: 0.9rem;
-  margin-left: auto; /* Pushes the title all the way to the right */
-  margin-right: auto;
-}
-
-.terminal-body {
-  padding: 30px;
-  line-height: 1.6;
-}
-
-.highlight {
-  color: var(--accent-color); /* Using our soft hacker green */
-}
-
-/* A fun little CSS animation for the hacker vibe */
-.blinking-cursor {
-  animation: blink 1s step-end infinite;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-/* Adds some breathing room to the new section and centers it */
-.projects-section {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: 0 auto; 
-}
-
-.projects-section h2 {
-  color: var(--accent-color);
-  margin-bottom: 30px;
-  font-weight: normal;
-}
-
-/* LESSON 3: CSS Grid.
-   Grid is perfect for 2D layouts.
-   The line below is pure magic. It tells the browser: 
-   "Make as many columns as will fit, but never let them get smaller than 250px. 
-   If there's extra room, stretch them out equally (1fr)." 
-*/
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 50px; /* The space between the grid cards */
-}
-
-/* Styling the individual cards */
-.project-card {
-  background-color: var(--window-bg);
-  border: 1px solid #444;
-  padding: 20px;
-  border-radius: 8px; /* Keeping it cozy */
-  transition: transform 0.3s ease, border-color 0.3s ease; /* Smooth animation setup */
-}
-
-/* LESSON 4: Hover States.
-   What happens when the user's mouse rests on the card?
-   We shift it up slightly and change the border color to our hacker accent!
-*/
-.project-card:hover {
-  transform: translateY(-15px); /* Moves it UP by 5 pixels */
-  border-color: var(--accent-color);
-}
-
-.project-card h3 {
-  margin-top: 0;
-  color: var(--text-main);
-}
-
-.project-card p {
-  color: #aaa; /* Slightly dimmer text so the heading stands out */
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
-.btn {
-  color: var(--accent-color);
-  text-decoration: none; /* Removes the default blue underline on links */
-  font-weight: bold;
-  display: inline-block;
-  margin-top: 15px;
-}
-
-.btn:hover {
-  color: var(--text-main);
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
 }

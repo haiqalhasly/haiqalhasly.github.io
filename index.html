@@ -1,57 +1,784 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Haiqal's Website</title>
-      <link rel="stylesheet" href="style.css">
+    <meta
+      name="description"
+      content="Muhammad Haiqal Aiman - Computer Science undergraduate specializing in backend development, AI integration, and intelligent automation."
+    />
+    <title>Muhammad Haiqal Aiman | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <main>
-      <section class="hero">
-        <div class="terminal-window">
-          <div class="terminal-header">
-            <span class="dot red"></span>
-            <span class="dot yellow"></span>
-            <span class="dot green"></span>
-            <span class="title">haiqal@portfolio:~</span>
+  <body
+    class="bg-zinc-950 text-zinc-200 antialiased selection:bg-emerald-400/20 selection:text-emerald-100"
+  >
+    <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+      <div
+        class="absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-emerald-500/10 blur-3xl"
+      ></div>
+      <div
+        class="absolute top-1/3 right-[-6rem] h-80 w-80 rounded-full bg-sky-500/10 blur-3xl"
+      ></div>
+      <div
+        class="absolute bottom-[-8rem] left-[-6rem] h-80 w-80 rounded-full bg-amber-500/10 blur-3xl"
+      ></div>
+    </div>
+
+    <header
+      class="sticky top-0 z-50 border-b border-zinc-800/70 bg-zinc-950/85 backdrop-blur-xl"
+    >
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+      >
+        <a href="#home" class="group inline-flex items-center gap-3">
+          <span
+            class="flex h-10 w-10 items-center justify-center rounded-2xl border border-zinc-800 bg-zinc-900 text-sm font-semibold text-zinc-100 transition group-hover:border-emerald-400/50 group-hover:text-emerald-200"
+          >
+            MH
+          </span>
+          <div>
+            <p class="text-sm font-semibold tracking-wide text-zinc-100">
+              Muhammad Haiqal Aiman
+            </p>
+            <p class="text-xs text-zinc-400">Backend, AI, and automation</p>
           </div>
-          <div class="terminal-body">
-            <h1>Hi, I'm <span class="highlight">Haiqal</span>.</h1>
-            <p>> Aspiring AI/Software Engineer.</p>
-            <p>> Still learning!</p>
-            <p class="blinking-cursor">> _</p>
+        </a>
+
+        <button
+          id="menuButton"
+          class="inline-flex items-center rounded-full border border-zinc-800 bg-zinc-900 px-3 py-2 text-sm font-medium text-zinc-200 transition hover:border-emerald-400/50 hover:text-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-400/60 md:hidden"
+          aria-expanded="false"
+          aria-controls="mobileNav"
+        >
+          Menu
+        </button>
+
+        <nav class="hidden items-center gap-1 md:flex" aria-label="Primary">
+          <a
+            class="nav-link rounded-full px-4 py-2 text-sm text-zinc-400 transition hover:bg-zinc-900 hover:text-zinc-100"
+            href="#about"
+            >About</a
+          >
+          <a
+            class="nav-link rounded-full px-4 py-2 text-sm text-zinc-400 transition hover:bg-zinc-900 hover:text-zinc-100"
+            href="#experience"
+            >Experience</a
+          >
+          <a
+            class="nav-link rounded-full px-4 py-2 text-sm text-zinc-400 transition hover:bg-zinc-900 hover:text-zinc-100"
+            href="#projects"
+            >Projects</a
+          >
+          <a
+            class="nav-link rounded-full px-4 py-2 text-sm text-zinc-400 transition hover:bg-zinc-900 hover:text-zinc-100"
+            href="#gallery"
+            >Gallery</a
+          >
+          <a
+            class="nav-link rounded-full px-4 py-2 text-sm text-zinc-400 transition hover:bg-zinc-900 hover:text-zinc-100"
+            href="#contact"
+            >Contact</a
+          >
+        </nav>
+      </div>
+
+      <div
+        id="mobileNav"
+        class="hidden border-t border-zinc-800/70 px-4 pb-4 md:hidden sm:px-6"
+        aria-label="Mobile primary"
+      >
+        <div class="grid gap-2 pt-4">
+          <a
+            class="rounded-2xl border border-zinc-800 bg-zinc-900/70 px-4 py-3 text-sm text-zinc-300 transition hover:border-emerald-400/50 hover:text-zinc-50"
+            href="#about"
+            >About</a
+          >
+          <a
+            class="rounded-2xl border border-zinc-800 bg-zinc-900/70 px-4 py-3 text-sm text-zinc-300 transition hover:border-emerald-400/50 hover:text-zinc-50"
+            href="#experience"
+            >Experience</a
+          >
+          <a
+            class="rounded-2xl border border-zinc-800 bg-zinc-900/70 px-4 py-3 text-sm text-zinc-300 transition hover:border-emerald-400/50 hover:text-zinc-50"
+            href="#projects"
+            >Projects</a
+          >
+          <a
+            class="rounded-2xl border border-zinc-800 bg-zinc-900/70 px-4 py-3 text-sm text-zinc-300 transition hover:border-emerald-400/50 hover:text-zinc-50"
+            href="#gallery"
+            >Gallery</a
+          >
+          <a
+            class="rounded-2xl border border-zinc-800 bg-zinc-900/70 px-4 py-3 text-sm text-zinc-300 transition hover:border-emerald-400/50 hover:text-zinc-50"
+            href="#contact"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main id="home">
+      <section
+        class="mx-auto max-w-7xl px-4 pb-16 pt-16 sm:px-6 lg:px-8 lg:pb-24 lg:pt-24"
+      >
+        <div
+          class="grid items-center gap-12 lg:grid-cols-[1.25fr_0.75fr] lg:gap-16"
+        >
+          <div>
+            <div
+              class="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-4 py-2 text-sm text-emerald-100"
+            >
+              <span class="h-2 w-2 rounded-full bg-emerald-300"></span>
+              Computer Science Undergraduate at Universiti Teknologi PETRONAS
+            </div>
+            <h1
+              class="max-w-4xl text-4xl font-bold tracking-tight text-zinc-50 sm:text-5xl lg:text-7xl"
+            >
+              Hi, I&apos;m Muhammad Haiqal Aiman.
+            </h1>
+            <p
+              class="mt-5 max-w-3xl text-lg leading-8 text-zinc-400 sm:text-xl"
+            >
+              Computer Science Undergraduate | Backend &amp; AI Developer |
+              Problem Solver
+            </p>
+            <p
+              class="mt-6 max-w-3xl text-base leading-7 text-zinc-300 sm:text-lg"
+            >
+              I am a passionate Computer Science student at Universiti Teknologi
+              PETRONAS (CGPA 3.81) who loves bridging the gap between complex
+              algorithms and everyday utility. Whether it&apos;s developing
+              intelligent systems or documenting moments through photography and
+              videography, I thrive on creating impactful experiences.
+            </p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="#projects"
+                class="inline-flex items-center justify-center rounded-full bg-emerald-400 px-6 py-3 text-sm font-semibold text-zinc-950 transition duration-200 hover:-translate-y-0.5 hover:bg-emerald-300 focus:outline-none focus:ring-2 focus:ring-emerald-300 focus:ring-offset-2 focus:ring-offset-zinc-950"
+              >
+                View My Work
+              </a>
+              <a
+                href="resume.pdf"
+                download
+                class="inline-flex items-center justify-center rounded-full border border-zinc-700 bg-zinc-900 px-6 py-3 text-sm font-semibold text-zinc-100 transition duration-200 hover:-translate-y-0.5 hover:border-zinc-500 hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-emerald-300 focus:ring-offset-2 focus:ring-offset-zinc-950"
+              >
+                Download Resume
+              </a>
+              <a
+                href="#contact"
+                class="inline-flex items-center justify-center rounded-full border border-zinc-700 bg-transparent px-6 py-3 text-sm font-semibold text-zinc-100 transition duration-200 hover:-translate-y-0.5 hover:border-emerald-400/50 hover:text-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-300 focus:ring-offset-2 focus:ring-offset-zinc-950"
+              >
+                Contact Me
+              </a>
+            </div>
+          </div>
+
+          <aside
+            class="rounded-3xl border border-zinc-800/80 bg-zinc-900/60 p-6 shadow-2xl shadow-black/20 backdrop-blur"
+          >
+            <div class="rounded-2xl border border-zinc-800 bg-zinc-950/80 p-5">
+              <p class="text-sm uppercase tracking-[0.3em] text-zinc-500">
+                Snapshot
+              </p>
+              <dl class="mt-6 grid gap-4 text-sm text-zinc-300">
+                <div
+                  class="flex items-center justify-between gap-4 border-b border-zinc-800 pb-4"
+                >
+                  <dt class="text-zinc-500">University</dt>
+                  <dd class="text-right text-zinc-100">
+                    Universiti Teknologi PETRONAS
+                  </dd>
+                </div>
+                <div
+                  class="flex items-center justify-between gap-4 border-b border-zinc-800 pb-4"
+                >
+                  <dt class="text-zinc-500">CGPA</dt>
+                  <dd class="text-right text-zinc-100">3.81</dd>
+                </div>
+                <div
+                  class="flex items-center justify-between gap-4 border-b border-zinc-800 pb-4"
+                >
+                  <dt class="text-zinc-500">Focus</dt>
+                  <dd class="text-right text-zinc-100">
+                    Backend, AI, Computer Vision
+                  </dd>
+                </div>
+                <div class="flex items-center justify-between gap-4">
+                  <dt class="text-zinc-500">Creative Lens</dt>
+                  <dd class="text-right text-zinc-100">
+                    Photography, videography, event documentation
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="about" class="border-t border-zinc-800/80 bg-zinc-950/60">
+        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+          <div class="grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-12">
+            <div>
+              <p
+                class="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-200/80"
+              >
+                About Me
+              </p>
+              <h2
+                class="mt-4 text-3xl font-bold tracking-tight text-zinc-50 sm:text-4xl"
+              >
+                Structured thinking, practical execution, and creative
+                documentation.
+              </h2>
+            </div>
+            <div class="grid gap-6 md:grid-cols-2">
+              <article
+                class="rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6"
+              >
+                <h3 class="text-lg font-semibold text-zinc-100">Background</h3>
+                <p class="mt-3 leading-7 text-zinc-400">
+                  Currently exploring the depths of backend development,
+                  artificial intelligence, and computer vision.
+                </p>
+              </article>
+              <article
+                class="rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6"
+              >
+                <h3 class="text-lg font-semibold text-zinc-100">
+                  Beyond the Code
+                </h3>
+                <p class="mt-3 leading-7 text-zinc-400">
+                  When I&apos;m not building automation pipelines or competing
+                  in hackathons, you can find me organizing events, editing
+                  videos, or building my &quot;second brain&quot; in Obsidian. I
+                  believe in creating solutions that are not only technically
+                  sound but also highly relatable and accessible to the everyday
+                  person.
+                </p>
+              </article>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="projects-section">
-        <h2>> ls ./projects</h2>
-
-        <div class="project-grid">
-          <article class="project-card">
-            <h3>Project Alpha <span class="dot exit">x</span></h3>
-
-            <p>
-              A minimalist weather app built with vanilla JavaScript. Focuses on
-              clean UI.
+      <section id="experience" class="border-t border-zinc-800/80">
+        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+          <div
+            class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
+          >
+            <div>
+              <p
+                class="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-200/80"
+              >
+                Experience &amp; Leadership
+              </p>
+              <h2
+                class="mt-4 text-3xl font-bold tracking-tight text-zinc-50 sm:text-4xl"
+              >
+                Leadership, facilitation, and program delivery.
+              </h2>
+            </div>
+            <p class="max-w-xl text-zinc-400">
+              A concise timeline of roles that shaped my ability to organize,
+              communicate, and execute across technical and community settings.
             </p>
-            <a href="#" class="btn">[ View Code ]</a>
-          </article>
+          </div>
 
-          <article class="project-card">
-            <h3>Project Beta</h3>
-            <p>E-commerce landing page with a cozy, dark-mode aesthetic.</p>
-            <a href="#" class="btn">[ View Code ]</a>
-          </article>
+          <div class="mt-10 space-y-4">
+            <article
+              class="grid gap-4 rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 md:grid-cols-[180px_1fr] md:gap-8"
+            >
+              <div>
+                <p
+                  class="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-200/80"
+                >
+                  Current
+                </p>
+                <h3 class="mt-2 text-xl font-semibold text-zinc-50">
+                  Assistant Head of Department
+                </h3>
+                <p class="text-sm text-zinc-500">
+                  Event Management @ Google Developer Student Club (GDSC)
+                </p>
+              </div>
+              <p class="leading-7 text-zinc-400">
+                Organized and managed events, bridging tech communities and
+                facilitating smooth operations.
+              </p>
+            </article>
 
-          <article class="project-card">
-            <h3>Project Gamma</h3>
-            <p>A Python script that automates my morning coffee routine.</p>
-            <a href="#" class="btn">[ View Code ]</a>
-          </article>
+            <article
+              class="grid gap-4 rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 md:grid-cols-[180px_1fr] md:gap-8"
+            >
+              <div>
+                <p
+                  class="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-200/80"
+                >
+                  Jan 2026
+                </p>
+                <h3 class="mt-2 text-xl font-semibold text-zinc-50">
+                  Project Director
+                </h3>
+                <p class="text-sm text-zinc-500">
+                  BrainROOTS: Grounded to Grow
+                </p>
+              </div>
+              <p class="leading-7 text-zinc-400">
+                Led a two-day innovation program focusing on actionable growth
+                and development.
+              </p>
+            </article>
+
+            <article
+              class="grid gap-4 rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 md:grid-cols-[180px_1fr] md:gap-8"
+            >
+              <div>
+                <p
+                  class="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-200/80"
+                >
+                  Jan - Mar 2024
+                </p>
+                <h3 class="mt-2 text-xl font-semibold text-zinc-50">
+                  Data Analysis Workshop Facilitator
+                </h3>
+              </div>
+              <p class="leading-7 text-zinc-400">
+                Taught fundamental data analysis principles to peers and
+                participants.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="border-t border-zinc-800/80 bg-zinc-950/60">
+        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+          <div
+            class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
+          >
+            <div>
+              <p
+                class="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-200/80"
+              >
+                Projects &amp; Hackathons
+              </p>
+              <h2
+                class="mt-4 text-3xl font-bold tracking-tight text-zinc-50 sm:text-4xl"
+              >
+                Selected work across AI, automation, and problem solving.
+              </h2>
+            </div>
+            <p class="max-w-xl text-zinc-400">
+              A responsive grid of featured projects and achievement highlights
+              with subtle hover motion and clear structure.
+            </p>
+          </div>
+
+          <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            <article
+              class="group rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/40 hover:shadow-lg hover:shadow-emerald-500/10"
+            >
+              <div class="flex items-center justify-between gap-4">
+                <p
+                  class="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-200/80"
+                >
+                  Featured Project
+                </p>
+                <span
+                  class="rounded-full border border-zinc-700 px-3 py-1 text-xs text-zinc-400"
+                  >AI</span
+                >
+              </div>
+              <h3 class="mt-4 text-2xl font-semibold text-zinc-50">
+                UTP AI Assistant
+              </h3>
+              <p class="mt-3 leading-7 text-zinc-400">
+                A dynamic chatbot featuring 2D/3D map navigation using the A*
+                Search algorithm and RAG architecture.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-2">
+                <span
+                  class="rounded-full bg-zinc-950 px-3 py-1 text-xs text-zinc-300"
+                  >A* Search</span
+                >
+                <span
+                  class="rounded-full bg-zinc-950 px-3 py-1 text-xs text-zinc-300"
+                  >RAG</span
+                >
+                <span
+                  class="rounded-full bg-zinc-950 px-3 py-1 text-xs text-zinc-300"
+                  >Navigation</span
+                >
+              </div>
+            </article>
+
+            <article
+              class="group rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/40 hover:shadow-lg hover:shadow-emerald-500/10"
+            >
+              <div class="flex items-center justify-between gap-4">
+                <p
+                  class="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-200/80"
+                >
+                  Featured Project
+                </p>
+                <span
+                  class="rounded-full border border-zinc-700 px-3 py-1 text-xs text-zinc-400"
+                  >Leadership</span
+                >
+              </div>
+              <h3 class="mt-4 text-2xl font-semibold text-zinc-50">
+                Waste Wise
+              </h3>
+              <p class="mt-3 leading-7 text-zinc-400">
+                Project Leader for an application designed to tackle everyday
+                waste management challenges.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-2">
+                <span
+                  class="rounded-full bg-zinc-950 px-3 py-1 text-xs text-zinc-300"
+                  >Jan - Mar 2024</span
+                >
+                <span
+                  class="rounded-full bg-zinc-950 px-3 py-1 text-xs text-zinc-300"
+                  >Problem Solving</span
+                >
+              </div>
+            </article>
+
+            <article
+              class="group rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/40 hover:shadow-lg hover:shadow-emerald-500/10"
+            >
+              <div class="flex items-center justify-between gap-4">
+                <p
+                  class="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-200/80"
+                >
+                  Achievement
+                </p>
+                <span
+                  class="rounded-full border border-zinc-700 px-3 py-1 text-xs text-zinc-400"
+                  >Hackathon</span
+                >
+              </div>
+              <h3 class="mt-4 text-2xl font-semibold text-zinc-50">
+                1st Place - Secure Nex Hackathon
+              </h3>
+              <p class="mt-3 leading-7 text-zinc-400">
+                Recognition for delivering a winning solution in a competitive
+                environment.
+              </p>
+            </article>
+
+            <article
+              class="group rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/40 hover:shadow-lg hover:shadow-emerald-500/10 md:col-span-2 xl:col-span-1"
+            >
+              <div class="flex items-center justify-between gap-4">
+                <p
+                  class="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-200/80"
+                >
+                  Hackathon Track
+                </p>
+                <span
+                  class="rounded-full border border-zinc-700 px-3 py-1 text-xs text-zinc-400"
+                  >10+ Events</span
+                >
+              </div>
+              <h3 class="mt-4 text-2xl font-semibold text-zinc-50">
+                Active Competitor
+              </h3>
+              <p class="mt-3 leading-7 text-zinc-400">
+                Participated in over 10 hackathons, including preparations for
+                KitaHack 2026 and MARA i-GEN 2026.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="border-t border-zinc-800/80">
+        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+          <div class="grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-12">
+            <div>
+              <p
+                class="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-200/80"
+              >
+                Skills &amp; Tools
+              </p>
+              <h2
+                class="mt-4 text-3xl font-bold tracking-tight text-zinc-50 sm:text-4xl"
+              >
+                Technical depth with a practical creative layer.
+              </h2>
+            </div>
+            <div class="grid gap-4 sm:grid-cols-2">
+              <article
+                class="rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6"
+              >
+                <h3 class="text-lg font-semibold text-zinc-100">Languages</h3>
+                <p class="mt-3 leading-7 text-zinc-400">
+                  Python, Java, JavaScript, R, C++ (Arduino)
+                </p>
+              </article>
+              <article
+                class="rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6"
+              >
+                <h3 class="text-lg font-semibold text-zinc-100">
+                  Frameworks &amp; Tech
+                </h3>
+                <p class="mt-3 leading-7 text-zinc-400">
+                  Flask, FastAPI, n8n (Automation), RAG Architectures
+                </p>
+              </article>
+              <article
+                class="rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 sm:col-span-2"
+              >
+                <h3 class="text-lg font-semibold text-zinc-100">Creative</h3>
+                <p class="mt-3 leading-7 text-zinc-400">
+                  Photography, Videography, Event Documentation
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="border-t border-zinc-800/80 bg-zinc-950/60">
+        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+          <div
+            class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
+          >
+            <div>
+              <p
+                class="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-200/80"
+              >
+                Creative Lens
+              </p>
+              <h2
+                class="mt-4 text-3xl font-bold tracking-tight text-zinc-50 sm:text-4xl"
+              >
+                Photography and event documentation with a masonry layout.
+              </h2>
+            </div>
+            <p class="max-w-xl text-zinc-400">
+              A flexible visual section designed to handle varied aspect ratios
+              cleanly and keep the layout airy.
+            </p>
+          </div>
+
+          <div class="masonry mt-10">
+            <figure
+              class="masonry-item overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900/70"
+            >
+              <img
+                class="h-72 w-full object-cover"
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
+                alt="Team collaboration in a workspace"
+              />
+              <figcaption class="p-5">
+                <h3 class="text-lg font-semibold text-zinc-100">
+                  Workshop documentation
+                </h3>
+                <p class="mt-2 text-sm leading-6 text-zinc-400">
+                  Capturing energy, process, and participation during technical
+                  sessions.
+                </p>
+              </figcaption>
+            </figure>
+
+            <figure
+              class="masonry-item overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900/70"
+            >
+              <img
+                class="h-56 w-full object-cover"
+                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80"
+                alt="Camera in a creative event setting"
+              />
+              <figcaption class="p-5">
+                <h3 class="text-lg font-semibold text-zinc-100">
+                  Event storytelling
+                </h3>
+                <p class="mt-2 text-sm leading-6 text-zinc-400">
+                  Turning moments from events into a coherent narrative.
+                </p>
+              </figcaption>
+            </figure>
+
+            <figure
+              class="masonry-item overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900/70"
+            >
+              <img
+                class="h-80 w-full object-cover"
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
+                alt="People collaborating in a community event"
+              />
+              <figcaption class="p-5">
+                <h3 class="text-lg font-semibold text-zinc-100">
+                  Community moments
+                </h3>
+                <p class="mt-2 text-sm leading-6 text-zinc-400">
+                  Documenting collaboration, learning, and shared momentum.
+                </p>
+              </figcaption>
+            </figure>
+
+            <figure
+              class="masonry-item overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900/70"
+            >
+              <img
+                class="h-64 w-full object-cover"
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
+                alt="Laptop setup for technical work"
+              />
+              <figcaption class="p-5">
+                <h3 class="text-lg font-semibold text-zinc-100">
+                  Build environment
+                </h3>
+                <p class="mt-2 text-sm leading-6 text-zinc-400">
+                  Quiet focus for planning, coding, and refining systems.
+                </p>
+              </figcaption>
+            </figure>
+
+            <figure
+              class="masonry-item overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900/70"
+            >
+              <img
+                class="h-96 w-full object-cover"
+                src="https://images.unsplash.com/photo-1472653431158-6364773b2a56?auto=format&fit=crop&w=1200&q=80"
+                alt="Outdoor event scene with warm lighting"
+              />
+              <figcaption class="p-5">
+                <h3 class="text-lg font-semibold text-zinc-100">
+                  Venue atmosphere
+                </h3>
+                <p class="mt-2 text-sm leading-6 text-zinc-400">
+                  Highlights of the environment and tone behind each event.
+                </p>
+              </figcaption>
+            </figure>
+
+            <figure
+              class="masonry-item overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900/70"
+            >
+              <img
+                class="h-60 w-full object-cover"
+                src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80"
+                alt="Person documenting an event with a camera"
+              />
+              <figcaption class="p-5">
+                <h3 class="text-lg font-semibold text-zinc-100">
+                  On-site documentation
+                </h3>
+                <p class="mt-2 text-sm leading-6 text-zinc-400">
+                  Responsive capture for portfolios, recaps, and archives.
+                </p>
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </section>
     </main>
+
+    <footer id="contact" class="border-t border-zinc-800/80">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+        <div
+          class="rounded-[2rem] border border-zinc-800 bg-zinc-900/70 p-8 sm:p-10"
+        >
+          <div class="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+            <div>
+              <p
+                class="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-200/80"
+              >
+                Contact
+              </p>
+              <h2
+                class="mt-4 text-3xl font-bold tracking-tight text-zinc-50 sm:text-4xl"
+              >
+                Let&apos;s build something practical, useful, and
+                well-structured.
+              </h2>
+              <p class="mt-4 max-w-2xl leading-7 text-zinc-400">
+                Reach out for collaborations, technical conversations, event
+                work, or creative documentation.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-3 lg:justify-end">
+              <a
+                href="https://github.com/"
+                target="_blank"
+                rel="noreferrer"
+                class="inline-flex items-center gap-3 rounded-full border border-zinc-700 bg-zinc-950 px-5 py-3 text-sm font-medium text-zinc-100 transition hover:-translate-y-0.5 hover:border-emerald-400/50 hover:text-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-300 focus:ring-offset-2 focus:ring-offset-zinc-950"
+              >
+                <svg
+                  class="h-5 w-5"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 .5C5.73.5.88 5.35.88 11.61c0 5.02 3.25 9.28 7.76 10.78.57.1.78-.24.78-.53v-1.87c-3.16.69-3.83-1.35-3.83-1.35-.52-1.32-1.27-1.67-1.27-1.67-1.04-.72.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.74 2.69 1.24 3.35.95.1-.74.4-1.24.73-1.53-2.52-.29-5.16-1.26-5.16-5.58 0-1.23.44-2.24 1.16-3.03-.12-.29-.5-1.46.11-3.05 0 0 .96-.31 3.14 1.16a10.83 10.83 0 0 1 5.72 0c2.18-1.47 3.14-1.16 3.14-1.16.61 1.59.23 2.76.11 3.05.72.79 1.16 1.8 1.16 3.03 0 4.33-2.64 5.29-5.16 5.57.41.35.78 1.05.78 2.12v3.14c0 .29.2.64.79.53 4.5-1.5 7.75-5.76 7.75-10.77C23.12 5.35 18.27.5 12 .5Z"
+                  />
+                </svg>
+                GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noreferrer"
+                class="inline-flex items-center gap-3 rounded-full border border-zinc-700 bg-zinc-950 px-5 py-3 text-sm font-medium text-zinc-100 transition hover:-translate-y-0.5 hover:border-emerald-400/50 hover:text-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-300 focus:ring-offset-2 focus:ring-offset-zinc-950"
+              >
+                <svg
+                  class="h-5 w-5"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.45 20.45h-3.56v-5.58c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.68H9.34V9h3.42v1.56h.05c.48-.9 1.65-1.85 3.39-1.85 3.62 0 4.29 2.39 4.29 5.49v6.25ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14Zm1.78 13.02H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .75 0 1.68v20.64C0 23.25.79 24 1.77 24h20.45c.98 0 1.78-.75 1.78-1.68V1.68C24 .75 23.2 0 22.22 0Z"
+                  />
+                </svg>
+                LinkedIn
+              </a>
+              <a
+                href="mailto:your.email@example.com"
+                class="inline-flex items-center gap-3 rounded-full border border-zinc-700 bg-zinc-950 px-5 py-3 text-sm font-medium text-zinc-100 transition hover:-translate-y-0.5 hover:border-emerald-400/50 hover:text-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-300 focus:ring-offset-2 focus:ring-offset-zinc-950"
+              >
+                <svg
+                  class="h-5 w-5"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M1.5 5.25A2.25 2.25 0 0 1 3.75 3h16.5a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 20.25 21H3.75A2.25 2.25 0 0 1 1.5 18.75V5.25Zm2.25-.75a.75.75 0 0 0-.75.75v.69l9 5.4 9-5.4v-.69a.75.75 0 0 0-.75-.75H3.75Zm17.25 3.26-7.87 4.72a2.25 2.25 0 0 1-2.3 0L3.75 7.76v10.99a.75.75 0 0 0 .75.75h15a.75.75 0 0 0 .75-.75V7.76Z"
+                  />
+                </svg>
+                Email
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="mt-10 flex flex-col gap-3 border-t border-zinc-800 pt-6 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between"
+          >
+            <p>Designed for a structured minimalist presentation.</p>
+            <p>
+              Replace the placeholder resume, GitHub, LinkedIn, and email URLs
+              with your actual links.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
   </body>
 </html>
